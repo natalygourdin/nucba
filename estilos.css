@@ -42,15 +42,20 @@ font-family: sans-serif ;
 #hero h2{
     font-size:150px;
     font-family: 'Ysabeau Infant', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 90px;
+    background: #FF1269;
+background: linear-gradient(to top, #FF1269 40%, #d071cd 85%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 h2 span{
     font-family: 'Satisfy', cursive;
-    text-transform: none;
     font-size: 140px;
     color: #ffffff;
-
+    background: linear-gradient(to top, #FF1269 100%, #FF1269 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #hero p{    font-family: 'lato', sans-serif;
     line-height: 36px;

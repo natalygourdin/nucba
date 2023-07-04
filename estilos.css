@@ -87,12 +87,10 @@ a:hover{ color: #413d40;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     margin: 10px 10px;
-    border: 2px solid #989898;
 }
 button:hover {
 	background-color:#ccc;
     color: var(--bg-b);
-    border: 1px solid #fff
 
 }
 .myButton2 {

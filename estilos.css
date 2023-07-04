@@ -67,7 +67,7 @@ color: #a9007e
 }
 
 a{ color: #ffffff;
-    text-decoration: none;
+    text-decoration: none; 
     border: 0px;
 }
 a:hover{ color: #413d40;

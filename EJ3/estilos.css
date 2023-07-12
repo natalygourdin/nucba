@@ -1,11 +1,8 @@
 
 *{
     --bg-b: #000;
-    --bg-w: #fff;
-    --tx-w:#fff;
-    --tx-b:#000
+    --bg-w: #fff
 }
-
 @keyframes bg{
     from {      background-image: url('img/bg.jpg');
     }
@@ -36,11 +33,6 @@ font-family: sans-serif ;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-}
-.container-nf{ text-align: center;
-    width: 60%;
-    margin: 0 auto;
 
 }
 #hero{
@@ -146,6 +138,7 @@ button:hover {
 }
 
 #description p{
+    width: 90%;
     text-align: center;
     margin: 0 auto;
     font-size: 14px;
@@ -159,140 +152,4 @@ button:hover {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-}
-
-#cards{
-    background-color: var(--bg-w);
-    padding: 4rem 0rem;
-
-}
-
-.cont-cards{
-    display: flex;
-    justify-content: space-between;
-    color: var(--tx-b);
-}
-.card{
-    width: 22%;
-    background-color: #efefef;
-    padding:4rem 2rem;
-    margin: 40px 0px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-.card h4{
-    text-transform: uppercase;
-    font-size: 16px;
-}
-.card p{
-    font-size: 15px;
-    line-height: 25px;
-    color:#848484
-}
-.card svg{
-    fill:#848484;
-}
-
-#contacto{
-    background-color: #e2e2e2;
-    padding: 4rem 0rem;
-
-}
-
-#contacto h2{
-    margin-bottom: 40px;
-}
-
-.info{
-    text-align: left;
-    font-size: 16px;
-    color:#252525
-
-}
-.info svg{
-    fill:#848484;
-
-margin-right: 20px;
-}
-
-footer{
-    background-color: var(--bg-b);
-    color: var(--tx-w);
-    text-align: center;
-    padding: 10px 0px;
-}
-
-footer img {
-    width: 60px;
-}
-
-@media screen and (max-width: 767px){
-    #cards{
-        width: 100%;
-    }
-    p{
-        padding: 15px!important;
-    }
-    main{
-        width: 100%;
-    }
-    section{
-        width: 100%!important;
-    }
-.container{    
-    overflow: hidden;
-    width: 100%;
-    display: block;
-}
-.container-nf{
-    width: 100%;
-    display: block;
-}
-
-.cont-cards{
-    width: 100%;
-
-    display: block;
-    color: var(--tx-b);
-}
-.card{
-    width: 90%;
-    padding: 1rem;
-}
-.photo{
-    overflow: hidden;
-  width: 100%;
-}
-.photo img{
-    width: 90%;
-  
-}
-iframe{
-    width: 90% !important;
-}
-#hero h2, #hero span{
-    font-size:3rem;
-}
-
-#contacto {
-    text-align: center;
-    margin: 0 auto;
-}nav li{
-    margin-left: 0px;
-    margin-right: 20px;
-    }
-
-body{
-        background-size: 200%;
-    }
-}
-
-
-
-@media screen and (max-width: 460px){
-
 }

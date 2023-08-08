@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>INTEGRADOR</title>
 </head>
+
 <body>
     <header>
-        <img src="img/logo-w.png" class="logo" alt="">
-        <nav>
-            <ul>
-                <li> <a href="#hero">INICIO</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#cards">SERVICIOS</a></li>
-                <li><a href="#contact">CONTACTO</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div id="header">
+                <img src="img/logo-w.png" class="header__logo" alt="">
+                <nav class="header__nav nav">
+                    <ul>
+                        <li> <a href="#hero">INICIO</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#cards">SERVICIOS</a></li>
+                        <li><a href="#contact">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <div class="header__login">
+                    <a href="login.html"><button class="login__button">INICIAR SESIÓN</button></a>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <section id="hero"></section>
@@ -27,4 +37,5 @@
 
     </footer>
 </body>
+
 </html>

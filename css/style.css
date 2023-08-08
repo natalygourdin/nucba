@@ -1,3 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800&family=Roboto:wght@100;300;500;700;900&display=swap');
+
+:root {
+    --bg-color: #11001e;
+    --text-color: #ffff;
+    --color-sec: #6f4dbc;
+    --font-primary: 'Roboto', sans-serif;;
+    --text-size-first: 3rem;
+    --text-size-sec: 2rem;
+    --text-size-th: 1rem;
+  }
 *{
-    
+    text-decoration: none;
+    list-style: none;  
+}
+  body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  .container{
+    text-align: center;
+    width: 1280px;
+    margin: 0 auto;
+  }
+#header{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-between; 
+}
+.header__logo{
+    width: 150px;
+}
+.header__nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+.header__nav li{
+    padding: 10px;
+}
+.header__nav a{
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: var(--text-size-th);
+}
+.header__nav a:hover{
+    color: var(--color-sec);
+}
+.login__button{
+    background-color: var(--color-sec);
+    padding: 8px 10px;
+    color: var(--text-color);
+    border: 0px;
+    cursor: pointer;
+}
+.login__button:hover{
+    background-color: var(--text-color);
+    color: var(--color-sec);
+
 }

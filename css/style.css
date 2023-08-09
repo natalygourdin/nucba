@@ -2,6 +2,7 @@
 
 :root {
     --bg-color: #11001e;
+    --bg-gradient: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
     --text-color: #ffff;
     --color-sec: #6f4dbc;
     --font-primary: 'Roboto', sans-serif;;
@@ -15,7 +16,29 @@
 }
   body{
     background-color: var(--bg-color);
+    background-image: var(--bg-gradient);
     color: var(--text-color);
+    background-blend-mode: multiply;
+    
+
+  }
+  body::before{
+    background: url(../img/circuito-01.svg);  
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top:70%;
+    left: 50%;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-size: 70%;
+    opacity: 0.2;
   }
   .container{
     text-align: center;
@@ -30,6 +53,9 @@
     flex-wrap: nowrap;
     align-items: baseline;
     justify-content: space-between;
+}
+header{
+    background: transparent;
 }
 .header__logo{
     width: 150px;
@@ -51,16 +77,133 @@
 }
 .header__nav a:hover{
     color: var(--color-sec);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
 }
 .login__button{
     background-color: var(--color-sec);
-    padding: 8px 10px;
+    padding: 0px 10px 10px 10px;
     color: var(--text-color);
     border: 0px;
     cursor: pointer;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    
 }
 .login__button:hover{
     background-color: var(--text-color);
     color: var(--color-sec);
 
+}
+.login__button span{
+    position: relative;
+    top: 7px;
+    margin-right: 5px;
+}
+.caja{
+    position: relative;
+    width: 200px;
+    height:200px;
+    padding: 20px;
+    background-color: #000;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+.caja::before, .caja__mask{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top:70%;
+    left: 50%;
+    display: block;
+    width: 1000px;
+    height: 800px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.caja::before{
+    background: url(../img/circuito-01.svg);  
+    background-size: 80%;
+    opacity: 0.3;
+ 
+}
+
+.caja__mask{
+    display: grid;
+    place-items: center;
+    mask: url(../img/circuito-01.svg);
+    -webkit-mask: url(../img/circuito-01.svg);
+    box-shadow: -3px 0px 25px 1px rgba(37,255,255,0.75);
+-webkit-box-shadow: -3px 0px 25px 1px rgba(37,255,255,0.75);
+-moz-box-shadow: -3px 0px 25px 1px rgba(37,255,255,0.75);
+}
+
+.caja__mask::before{
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 16px solid rgb(132, 141, 240);
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+    animation: recorrido 8s  infinite;
+    animation-delay: 0.5s;
+    -webkit-animation: recorrido 8s  infinite;
+    box-shadow: -3px 0px 25px 1px rgba(37,255,255,0.75);
+-webkit-box-shadow: -3px 0px 25px 1px rgba(37,255,255,0.75);
+-moz-box-shadow: -3px 0px 25px 1px rgba(37,255,255,0.75);
+}
+@keyframes recorrido{
+    0%{
+        transform: scale(1)     ;
+        -webkit-transform: scale(1)     ;
+        -moz-transform: scale(1)     ;
+        -ms-transform: scale(1)     ;
+        -o-transform: scale(1)     ;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+    50%{
+        transform: scale(4)     ;
+        -webkit-transform: scale(4)     ;
+        -moz-transform: scale(4)     ;
+        -ms-transform: scale(4)     ;
+        -o-transform: scale(4)     ;
+        border-radius: 80%;
+        -webkit-border-radius: 80%;
+        -moz-border-radius: 80%;
+        -ms-border-radius: 80%;
+        -o-border-radius: 80%;
+}
+    100%{
+        transform: scale(6)    ;
+        -webkit-transform: scale(6)    ;
+        -moz-transform: scale(6)    ;
+        -ms-transform: scale(6)    ;
+        -o-transform: scale(6)    ;
+        border-radius: 50%;
+        -webkit-border-radius:;
+        -moz-border-radius:;
+        -ms-border-radius:;
+        -o-border-radius:;
+}
+}
+.caja__titulo{
+    font-family: var(--font-primary);
+    font-size: var(--text-size-sec);
 }

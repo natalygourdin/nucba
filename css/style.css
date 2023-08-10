@@ -3,14 +3,21 @@
 :root {
     --bg-color: #11001e;
     --bg-gradient: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-    --text-color: #ffff;
+    --color-first: #ffff;
     --color-sec: #6f4dbc;
+    --color-th: #9aa9ff;
+    --color-ur: #81a9c8;
     --font-primary: 'Roboto', sans-serif;;
-    --text-size-first: 3rem;
+    --text-size-nav: 13px;
+    --text-size-first: 2.5rem;
     --text-size-sec: 2rem;
     --text-size-th: 1rem;
+    --text-size-ur: 0.85rem;
+    --text-size-ve: 0.65rem;
+    --text-line-texts: 185%;
+
   }
-*{
+*{ font-family: var(--font-primary);
     text-decoration: none;
     list-style: none;
     border: 0px;
@@ -18,27 +25,9 @@
   body{
     background-color: var(--bg-color);
     background-image: var(--bg-gradient);
-    color: var(--text-color);
+    color: var(--color-first);
     background-blend-mode: multiply;
 
-  }
-  body::before{
-    background: url(../img/circuito-01.svg);
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top:70%;
-    left: 50%;
-    display: block;
-    width: 100%;
-    height: 100vh;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    background-size: 70%;
-    opacity: 0;
   }
   .container{
     text-align: center;
@@ -55,10 +44,10 @@
     justify-content: space-between;
 }
 header{
-    background: transparent;
+    background: #000;
 }
 .header__logo{
-    width: 150px;
+    width: 130px;
 }
 .header__nav ul{
     display: flex;
@@ -71,12 +60,12 @@ header{
 }
 .header__nav a{
     font-family: var(--font-primary);
-    color: var(--text-color);
+    color: var(--color-first);
     font-weight: 300;
-    font-size: var(--text-size-th);
+     font-size:var(--text-size-nav)
 }
 .header__nav a:hover{
-    color: var(--color-sec);
+    color: var(--color-th);
     transition: all 1s;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -85,10 +74,12 @@ header{
 }
 .login__button{
     background-color: var(--color-sec);
-    padding: 0px 10px 10px 10px;
-    color: var(--text-color);
+    font-size: var(--text-size-ve);
+    padding: 0px 12px 10px 10px;
+    color: var(--color-first);
     border: 0px;
     cursor: pointer;
+    border-radius: 15px;
     transition: all 1s;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -97,7 +88,7 @@ header{
 
 }
 .login__button:hover{
-    background-color: var(--text-color);
+    background-color: var(--color-first);
     color: var(--color-sec);
 
 }
@@ -105,18 +96,23 @@ header{
     position: relative;
     top: 7px;
     margin-right: 5px;
+    padding: 0px;
+    font-size: 21px
 }
-.hero__caja{
+#hero{
+    min-height: 70vh;
+}
+.hero__content{
     position: relative;
-    width: 500px;
+    width: 25vw;
     height:200px;
-    padding: 50px;
-    background-color: #000;
+    padding: 30px;
+    background-color:rgba(0,0,0,0.15);
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 10%;
     text-align: center;
 }
-.hero__caja::before, .caja__mask{
+.hero__content::before, .hero__mask{
     content: '';
     position: absolute;
     z-index: -1;
@@ -131,12 +127,12 @@ header{
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
 }
-.hero__caja::before{
+.hero__content::before{
     background: url(../img/circuito-01.svg);
     opacity: 0.3;
 }
 
-.caja__mask{
+.hero__mask{
     display: grid;
     place-items: center;
     mask: url(../img/circuito-01.svg);
@@ -146,7 +142,7 @@ header{
     -moz-box-shadow: -3px 0px 25px 1px rgba(37,255,255,0.75);
 }
 
-.caja__mask::before{
+.hero__mask::before{
     content: '';
     position: absolute;
     width: 200px;
@@ -186,10 +182,11 @@ header{
 
 }
 }
-.caja__titulo{
+.hero__titulo{
     font-family: var(--font-primary);
     font-size: var(--text-size-first);
-   
+    animation: myAnim 1s ease  0.4s 1 normal both;
+    margin-top: -20px;
 }
 .cel{
     width: 200px;
@@ -200,23 +197,55 @@ header{
     animation: cel-animated 2s infinite;
     display: none;
 }
-
-
-
-    .caja__button{
+.hero__button{
         border-radius: 15px;
-        padding: 15px 20px;
+        padding: 12px 15px;
         background-color: var(--color-sec);
-        color: var(--text-color);
+        color: var(--color-first);
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
         -ms-border-radius: 15px;
         -o-border-radius: 15px;
         cursor: pointer;
         font-size: var(--text-size-th);
+        animation: cajaButton 2s ease 0.4s 1 normal both;
+
 }
 
-.caja__button:hover{
+.hero__button:hover{
     color:  var(--color-sec);
-    background-color:var(--text-color);
+    background-color:var(--color-first);
+}
+
+@keyframes cajaButton {
+	0% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+        content: 'ohoooooo';
+	}
+}
+#about{
+    background-color: rgba(0,0,0,0.55);
+    min-height: 80vh;
+    width: 100%;
+    padding: 0px;
+    background: url(../img/about.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.about__img{
+    width: 200px;
+    padding-top: 10%;
+}
+.about__text{
+margin: 0 auto;
+width: 30vw;
+font-weight: 300;
+font-size: var(--text-size-ur);
+line-height: var(--text-line-texts)
 }

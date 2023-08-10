@@ -13,6 +13,7 @@
 *{
     text-decoration: none;
     list-style: none;
+    border: 0px;
 }
   body{
     background-color: var(--bg-color);
@@ -107,7 +108,7 @@ header{
 }
 .hero__caja{
     position: relative;
-    width: 200px;
+    width: 500px;
     height:200px;
     padding: 50px;
     background-color: #000;
@@ -197,40 +198,25 @@ header{
     background-image: url(../img/iPhone0.jpg);
     background-size: 100%;
     animation: cel-animated 2s infinite;
+    display: none;
 }
 
-@keyframes cel-animated{
-    0%{
-        background-image: url(../img/iPhone0.jpg);
-        opacity: 1;
-    }
-     20%{
-        background-image: url(../img/iPhone1.jpg);
-        opacity: 1;
 
-        
-    }
-    40%{
-                opacity: 1;
-background-image: url(../img/iPhone2.jpg);
-      
-    }
 
-   60%{
-    background-image: url(../img/iPhone3.jpg);
-    opacity: 1;
+    .caja__button{
+        border-radius: 15px;
+        padding: 15px 20px;
+        background-color: var(--color-sec);
+        color: var(--text-color);
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        cursor: pointer;
+        font-size: var(--text-size-th);
+}
 
-    }
-
-    80%{
-        background-image: url(../img/iPhone4.jpg);
-        opacity: 1;
-
-    }
-    100%{
-        background-image: url(../img/iPhone5.jpg);
-        opacity: 1;
-
-    }
-
-    }
+.caja__button:hover{
+    color:  var(--color-sec);
+    background-color:var(--text-color);
+}

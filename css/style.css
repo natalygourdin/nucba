@@ -3,24 +3,30 @@
 :root {
     --bg-color: #11001e;
     --bg-gradient: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    --bg-gradient-w: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+    background-blend-mode: normal,color-burn;
     --color-first: #ffff;
-    --color-sec: #6f4dbc;
+    --color-sec: #76217d;
     --color-th: #9aa9ff;
     --color-ur: #81a9c8;
+    --color-ve: #1d1d1d;
     --font-primary: 'Roboto', sans-serif;;
     --text-size-nav: 13px;
     --text-size-first: 2.5rem;
     --text-size-sec: 2rem;
     --text-size-th: 1rem;
-    --text-size-ur: 0.85rem;
+    --text-size-ur: 0.95rem;
     --text-size-ve: 0.65rem;
-    --text-line-texts: 185%;
+    --text-line-texts: 2.4rem;
 
   }
 *{ font-family: var(--font-primary);
     text-decoration: none;
     list-style: none;
     border: 0px;
+}
+b{
+    color: var(--color-sec);
 }
   body{
     background-color: var(--bg-color);
@@ -48,6 +54,119 @@ header{
 }
 .header__logo{
     width: 130px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.header__logotext{
+    width: 100px;
+}
+.header__svg{
+  width: 30px;
+  stroke: #fff;
+  stroke-width: 11;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation: bounce-left 3s ease-in-out 1s infinite, logo 5s infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation: bounce-left 3s ease-in-out 1s infinite, logo 5s infinite;
+}
+@keyframes logo {
+    0% {fill: transparent;
+      stroke-dashoffset: 7000;
+      stroke-width: 25;
+
+    }
+    20% {
+      stroke-dashoffset: 10;
+      fill: transparent;
+      stroke-width: 10;
+
+    }
+  20.2% {
+    stroke-width: 5;
+      stroke-dashoffset: 0;
+      fill: #dfff0e;
+    }
+  40% {
+    stroke-width: 5;
+      stroke-dashoffset: 0;
+      fill: #dfff0e;
+    }
+  50% {    stroke-width: 0;
+
+      stroke-dashoffset: 0;
+      fill: #9371a8;
+    }
+ 70% {
+      stroke-dashoffset: 0;
+      fill: #9371a8;
+    }
+    80% {
+        stroke-dashoffset: 0;
+        fill: #fff;
+        stroke-width: 0;
+      }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #fff;
+        stroke-width: 0;
+      }
+  }
+  @keyframes bounce-left {
+
+    0% {
+        transform:translateX(0);
+        -webkit-transform:translateX(0);
+        -moz-transform:translateX(0);
+        -ms-transform:translateX(0);
+        -o-transform:translateX(0);
+}
+    5% {
+        transform:translateX(0);
+    }
+    20% {
+        transform:translateX(-11px);
+        -webkit-transform:translateX(-11px);
+        -moz-transform:translateX(-11px);
+        -ms-transform:translateX(-11px);
+        -o-transform:translateX(-11px);
+}
+    25% {
+        transform:translateX(0);
+    }
+    28% {
+        transform:translateX(-5px);
+        -webkit-transform:translateX(-5px);
+        -moz-transform:translateX(-5px);
+        -ms-transform:translateX(-5px);
+        -o-transform:translateX(-5px);
+}
+    35% {
+        transform:translateX(0);
+    }
+    42% {
+        transform:translateX(-2.5px);
+        -webkit-transform:translateX(-2.5px);
+        -moz-transform:translateX(-2.5px);
+        -ms-transform:translateX(-2.5px);
+        -o-transform:translateX(-2.5px);
+}
+    57% {
+        transform:translateX(0);
+    }
+    63% {
+        transform:translateX(-1px);
+        -webkit-transform:translateX(-1px);
+        -moz-transform:translateX(-1px);
+        -ms-transform:translateX(-1px);
+        -o-transform:translateX(-1px);
+}
+    70% {
+        transform:translateX(0);
+    }
+    100% {
+        transform:translateX(0);
+    }
 }
 .header__nav ul{
     display: flex;
@@ -79,13 +198,16 @@ header{
     color: var(--color-first);
     border: 0px;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 6px;
     transition: all 1s;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     -o-transition: all 1s;
-
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 .login__button:hover{
     background-color: var(--color-first);
@@ -109,7 +231,7 @@ header{
     padding: 30px;
     background-color:rgba(0,0,0,0.15);
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 10vw;
     text-align: center;
 }
 .hero__content::before, .hero__mask{
@@ -185,9 +307,16 @@ header{
 .hero__titulo{
     font-family: var(--font-primary);
     font-size: var(--text-size-first);
-    animation: myAnim 1s ease  0.4s 1 normal both;
+    animation: contentButton 1s ease  0.4s 1 normal both;
     margin-top: -20px;
+    -webkit-animation: contentButton 1s ease  0.4s 1 normal both;
+    line-height: 4rem;
 }
+.hero__titulo span{
+ font-size: 3rem;
+ content: '1';
+}
+
 .cel{
     width: 200px;
     height: 300px;
@@ -198,18 +327,19 @@ header{
     display: none;
 }
 .hero__button{
-        border-radius: 15px;
+        border-radius: 8px;
         padding: 12px 15px;
         background-color: var(--color-sec);
         color: var(--color-first);
-        -webkit-border-radius: 15px;
-        -moz-border-radius: 15px;
-        -ms-border-radius: 15px;
-        -o-border-radius: 15px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
         cursor: pointer;
         font-size: var(--text-size-th);
-        animation: cajaButton 2s ease 0.4s 1 normal both;
-
+        animation: contentButton 2s ease 0.4s 1 normal both;
+        -webkit-animation: contentButton 2s ease 0.4s 1 normal both;
+        font-weight: 300;
 }
 
 .hero__button:hover{
@@ -217,7 +347,7 @@ header{
     background-color:var(--color-first);
 }
 
-@keyframes cajaButton {
+@keyframes contentButton {
 	0% {
 		opacity: 0;
 		transform: translateY(250px);
@@ -229,23 +359,51 @@ header{
         content: 'ohoooooo';
 	}
 }
+@keyframes down {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px);
+		-webkit-transform: translateY(-250px);
+		-moz-transform: translateY(-250px);
+		-ms-transform: translateY(-250px);
+		-o-transform: translateY(-250px);
+}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+        content: 'ohoooooo';
+	}
+}
 #about{
-    background-color: rgba(0,0,0,0.55);
-    min-height: 80vh;
+    background-color: #fff;
+    min-height: 95vh;
     width: 100%;
     padding: 0px;
-    background: url(../img/about.jpg) no-repeat;
+    /* background: url(../img/about.jpg) no-repeat; */
     background-size: 100%;
 }
 
 .about__img{
-    width: 200px;
+    width: 120px;
     padding-top: 10%;
+    fill: #fff;
+    animation: down 1s ease  0.4s 1 normal both;
+    -webkit-animation: down 1s ease  0.4s 1 normal both;
 }
 .about__text{
+color: var(--color-ve);
 margin: 0 auto;
-width: 30vw;
+width: 50vw;
 font-weight: 300;
-font-size: var(--text-size-ur);
-line-height: var(--text-line-texts)
+font-size: var(--text-size-th);
+line-height: var(--text-line-texts);
+margin-top: 50px;
+column-count: 2;
+    column-gap: 20px; 
+}
+
+#cards{
+   min-height:95vh;
+background: var(--bg-gradient-w)
 }

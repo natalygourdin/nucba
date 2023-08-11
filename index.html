@@ -78,6 +78,7 @@
                     <br>
               Desarrollo de Aplicaciones y Sitios Web
             </h1>
+            
             <p class="hero__text"></p>
             <a href="#cards">
               <button class="hero__button">Ver Servicios</button></a
@@ -90,8 +91,8 @@
       <section id="about">
         <div class="container">
           <div class="about__content">
-            <h2 class="about_titulo">
-              <img class="about__img" src="img/logo-icon.svg" alt="" />
+            <h2 class="about__titulo"> 
+              <img class="about__img" src="img/logo-icon.svg" alt="" /><br>Sobre Nosotros  
             </h2>
             <!-- <div class="photo"></div> -->
             <div class="about__text">
@@ -115,21 +116,71 @@ la animación multimedia, los motion graphics y el diseño UX. <br>
       </section>
       <section id="cards">
         <div class="container">
+          <h2 class="cards__titulo"> 
+                Servicios
+              </h2>
             <div class="cards__content">
                 <div class="cards__card card">
-
+                  <span class="material-symbols-outlined">
+                    video_settings
+                    </span>
+                  <h4>Edición y Animación</h4>
+                  <p>Transformamos tus ideas en realidades visuales cautivadoras. Nuestros talentosos editores y animadores trabajan mano a mano contigo para llevar tus contenidos audiovisuales al siguiente nivel. 
+                    Desde cortometrajes hasta videos promocionales, aplicamos técnicas creativas y efectos visuales impactantes que hacen que tu mensaje destaque y resuene con tu audiencia.</p>
                 </div>
                 <div class="cards__card card">
-                    
+                  <span class="material-symbols-outlined">
+                    devices_other
+                    </span>
+                  <h4>Desarrollo de Apps & Sitios Web</h4>
+                  <p>Potenciamos tu presencia en línea mediante la creación de aplicaciones y sitios web innovadores y funcionales. Desde plataformas interactivas hasta soluciones móviles personalizadas, 
+                    nuestro equipo de expertos en desarrollo te ayudará a materializar tu visión digital, brindando una experiencia única a tus usuarios.</p>
                 </div>
                 <div class="cards__card card">
-                    
+                  <span class="material-symbols-outlined">
+                    tv_signin
+                    </span>
+                  <h4>Diseño UX (Experiencia de Usuario)</h4>
+                  <p>Creamos experiencias digitales que dejan huella. Nuestro equipo de diseño UX se enfoca en entender a tus usuarios y sus necesidades para crear interfaces intuitivas y atractivas. Cada clic, 
+                    cada interacción, está cuidadosamente diseñado para guiar a tus visitantes a través de un viaje fluido y satisfactorio, generando conexiones significativas y fomentando la lealtad a tu marca.</p>
                 </div>
             </div>
         </div>
       </section>
-      <section id="contact"></section>
+      <section id="contact">
+        <div class="container">
+          <h2 class="contact__titulo"> 
+            Contactanos!
+          </h2>
+          <div class="contact__content">
+          <form action="" class="contact__form">
+            <div class="form__element">
+              <label for="">Nombre:</label>
+              <input placeholder="Tu nombre y apellido" type="text">
+            </div>
+            <div class="form__element">
+              <label for="">Email:</label>
+              <input placeholder="tuemail@email.com"  type="email">
+            </div>
+            <div class="form__element">
+              <label for="">Mensaje:</label>
+              <textarea placeholder="Tu mensaje" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" class="form__button">ENVIAR</button>
+          </form>
+          <iframe class="contact__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52343.03503692947!2d-57.95317029999999!3d-34.9205082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62b1f0085a1%3A0xbcfc44f0547312e3!2sLa%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1691707896567!5m2!1ses-419!2sar" width="600" height="450" 
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
+
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="container">
+        <img class="footer__logo" src="img/logo-icon.svg" alt="">
+        <img class="footer__logo" src="img/logo-text.png" alt="">
+        <span>Todos los derechos reservados.</span>
+      </div>
+    </footer>
   </body>
 </html>

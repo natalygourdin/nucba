@@ -124,7 +124,7 @@ header {
 }
 
 .header__nav label span {
-    font-size: var(--text-size-sec);
+    font-size: 35px;
     display: none;
 }
 
@@ -141,6 +141,26 @@ header {
     cursor: pointer;
     border-radius: 6px;
     transition: all 1s;
+    margin-left: 20px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.login__button-reg{
+    background-color: var(--color-first);
+    color: var(--color-sec);
+    font-size: var(--text-size-ve);
+    padding: 0px 12px 10px 10px;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 1s;
+    margin-left: 20px;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
@@ -154,6 +174,11 @@ header {
 .login__button:hover {
     background-color: var(--color-first);
     color: var(--color-sec);
+
+}
+.login__button-reg:hover {
+    color: var(--color-first);
+    background-color: var(--color-sec);
 
 }
 
@@ -211,9 +236,6 @@ header {
     place-items: center;
     mask: url(../img/circuito-01.svg);
     -webkit-mask: url(../img/circuito-01.svg);
-    mask-size: 100vmin;
-    mask-repeat: no-repeat;
-    mask-position: center;
     box-shadow: -3px 0px 25px 1px rgba(37, 255, 255, 0.75);
     -webkit-box-shadow: -3px 0px 25px 1px rgba(37, 255, 255, 0.75);
     -moz-box-shadow: -3px 0px 25px 1px rgba(37, 255, 255, 0.75);
@@ -322,6 +344,7 @@ header {
     background-image: url(../img/desk.jpg);
     background-size: 100%;
     background-position: 0px -450px;
+    background-repeat: no-repeat;
     position: relative;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
@@ -725,13 +748,73 @@ footer span {
 
 
 /* RESPONIVE */
-@media (max-width:574px) {
+
+
+@media (max-width:980px) {
+
 .container{
-    width: 80%;
+    width: 90%;
+}
+#header {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-around;
+}
+#header {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-around;
+}
+.login__button{
+    margin:30px 10px;
 }
 #hero {
-    overflow-x: hidden;
+    overflow: hidden;
 }
+.hero__content {
+    position: relative;
+    width: 75%;
+    background-color: transparent;
+
+}
+.about__photo-nofix{
+    background-position: center ;
+
+}
+.about__text {
+    width: 95%;
+    margin-top: 80px;
+    columns: 2;
+    column-gap: 100px;
+    text-align: left;
+}
+
+.cards__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card{
+    width: 90%;
+    padding: 40px 15px;
+    margin-bottom: 30px;
+}
+.cards__img{
+    left: 50%;
+}
+}
+@media (max-width:574px) {
+
 .navbar-list{
     background: var(--color-ve);
     color: var(--color-first);
@@ -747,15 +830,22 @@ footer span {
 }
 .navbar label span{
     display: block;
-    position: relative;
-    top: 10px;
 }
 
 #toggle-menu:checked  ~ .navbar-list{
     display: flex ;
 }
 
-
+.hero__content {
+    position: relative;
+    width: 70%;
+    height: 200px;
+    padding: 10px;
+    background-color: transparent;
+    margin: 0 auto;
+    margin-top: 20vw;
+    text-align: center;
+}
 #cards {
     min-height: 95vh;
     background: var(--bg-gradient-th);
@@ -765,14 +855,12 @@ footer span {
     position: relative;
     top: 6vw;
 }
-
 .cards__content {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap;
     flex-direction: column;
-    padding: 0px;
-
+    justify-content: space-around;
 }
 .card{
     width: 90%;
@@ -810,5 +898,35 @@ footer span {
     width: 90%;
     margin-bottom: 30px;
 }
+.login__form {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+}
 
+.login__form input {
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: block;
+    margin: 25px 0px;
+    width: 50%;
+    padding-left: 50px;
+    margin: 10px auto;
+    text-align: left;
+}
+.registro__form {
+    margin: 0;
+    text-align: left;
+    width: 90%;
+}
+
+
+.registro__form input {
+    width: 90%;
+}
 }

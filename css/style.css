@@ -52,7 +52,7 @@ body {
 
 .container {
     text-align: center;
-    width: 1280px;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -748,7 +748,11 @@ footer span {
 
 
 /* RESPONIVE */
-
+@media (min-width:2400px) {
+#hero, #cards, #about{
+    min-height: 50vh;
+}
+}
 
 @media (max-width:980px) {
 

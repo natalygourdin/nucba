@@ -862,6 +862,7 @@ footer span {
     position: relative;
     left: 0%;
     margin-top: 25px;
+    width: 90%;
 }
 .cards__titulo {
     padding-bottom: 0;
@@ -936,5 +937,11 @@ footer span {
 
 .registro__form input {
     width: 90%;
+}
+}
+
+@media (max-width:340px) {
+.login__button{
+    margin: 30px 0px;
 }
 }

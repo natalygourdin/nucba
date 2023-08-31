@@ -91,7 +91,7 @@ cadenaDiez([1,2,3,4,5,6,7,8,9,10]);
 
 const cadenaNumero = (arr, num) => {
     for (let i = 0; i < arr.length; i++) {
-            console.log("El numero " + arr[i] + " multiplado por "+num+" da como resultado: "+arr[i]*num); 
+            console.log("El número " + arr[i] + " multiplicado por "+num+" da como resultado: "+arr[i]*num); 
        }
 }
 

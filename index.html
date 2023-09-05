@@ -1,13 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📋 E1: Condicionales, Ciclos y Funciones
-    </title>
-    <script src="main.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Vía TECH</title>
 </head>
+
 <body>
-    <h1>E1: Condicionales, Ciclos y Funciones</h1>
+    <header>
+        <div class="container">
+            <div id="header">
+                <div class="header__logo">
+                    <svg class="header__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 504.13 534.73"
+                        style="enable-background: new 0 0 504.13 534.73" xml:space="preserve">
+                        <path
+                            d="M326.06,349.99c6.9-24.66,30.1-37.41,48.34-55.74c92.4-92.92,36.43-254.97-88.87-278.72
+                        C170.83-6.21,58.79,102.48,91.01,218.92c8.08,29.18,24.08,59.56,46.14,80.31c18.37,17.28,34.74,28.49,41.23,50.76h26.15v37.81
+                        h-30.76v31.65h30.76v38.31h-30.76v31.64h30.76v32.59h31.65V489.4h33.38v32.59h31.64V489.4h26.06v-31.64H301.2v-38.31h26.06v-31.65
+                        H301.2v-37.81H326.06z M212.35,342.51c0.01-14.4,0.02-28.79,0.01-43.19c-0.01-13.35-5.15-18.93-18.48-20.26
+                        c-17.78-1.78-29.54-12.78-31.57-30.45c-0.59-5.15-1.97-7.87-7.01-10.26c-16.01-7.57-22.47-27.01-15.17-43.16
+                        c7.18-15.88,25.64-23.58,41.96-17.5c12.51,4.66,21.2,16.64,21.83,30.08c0.62,13.22-7.39,26.31-20.37,31.6
+                        c-4.74,1.93-5.27,4.56-4.49,8.63c1.68,8.75,7.46,13.42,18.12,14.6c20.52,2.27,32.23,15.33,32.25,36.08
+                        c0.01,14.61,0.01,29.22,0.01,43.84H212.35z M269.56,457.76h-33.38v-38.31h33.38V457.76z M269.56,349.99v37.81h-33.38v-37.81h7.89
+                        c0-62.68,0-125.31,0-187.71c-19.27-8.63-27.25-22.03-23.8-39.7c2.81-14.38,16.21-25.66,31.3-26.33
+                        c15.07-0.67,29.24,9.79,33.36,24.63c4.74,17.06-2.82,30.63-23.15,41.64c0,62.47,0,124.96,0,187.47H269.56z M293.26,299.36
+                        c-0.02,14.38,0,28.77,0,43.15H276.3c-0.01-15.63-0.03-31.26,0.02-46.9c0.05-15.26,10.48-28.46,25.22-32.13
+                        c3.42-0.86,7.05-0.86,10.54-1.47c7.93-1.38,12.51-6.06,14.31-13.78c1.07-4.61,0.03-7.03-4.75-9.05
+                        c-31.58-13.4-21.82-62.64,12.44-63.05c16.62-0.2,29.42,9.79,33.32,25.98c3.55,14.75-3.99,30.31-18.37,36.87
+                        c-3.97,1.81-5.44,3.9-5.78,8.29c-1.42,18.36-13.18,29.93-31.59,31.78C298.28,280.39,293.28,285.82,293.26,299.36z" />
+                    </svg>
+                    <img src="img/logo-w-text.png" class="header__logotext" alt="Logo" />
+                </div>
+                <nav class="header__nav navbar">
+                    <label for="toggle-menu">
+                        <span class="material-symbols-outlined"> menu</span>
+                    </label>
+                    <input type="checkbox" id="toggle-menu">
+                    <ul class="navbar-list">
+                        <li><a class="navbar-link" href="#hero">INICIO</a></li>
+                        <li><a class="navbar-link" href="#about">ABOUT</a></li>
+                        <li><a class="navbar-link" href="#cards">SERVICIOS</a></li>
+                        <li><a class="navbar-link" href="#contact">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <div class="header__login">
+                    <a href="login.html">
+                        <button class="login__button">
+                            <span class="material-icons"> account_circle</span>
+                            INICIAR SESIÓN
+                        </button>
+                    </a>
+                    <a href="registro.html">
+                      <button class="login__button login__button-reg">
+                        <span class="material-symbols-outlined">
+                          app_registration
+                          </span>                         REGISTRARSE
+                      </button>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__titulo">
+                        <span class="material-symbols-outlined">
+                            devices_other
+                        </span>
+                        <br>
+                        Desarrollo de Aplicaciones y Sitios Web
+                    </h1>
+
+                    <p class="hero__text"></p>
+                    <a href="#cards">
+                        <button class="hero__button">Ver Servicios</button></a>
+                    <span class="hero__mask"></span>
+                </div>
+                <div class="cel"></div>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <div class="about__photo-nofix"></div>
+
+            <div class="container">
+
+                <div class="about__content">
+                    <h2 class="about__titulo">
+                        <img class="about__img" src="img/logo-icon.svg" alt="" /><br>Sobre Nosotros
+                    </h2>
+                    <!-- <div class="photo"></div> -->
+                    <div class="about__text">
+                        Nos dedicamos a trabajar en el emocionante mundo del <b>desarrollo de aplicaciones móviles y
+                            sitios web</b>, así como en la <b>edición de videos y motion graphics</b>, y el diseño
+                        <b>UX</b> de alta calidad. <br />
+                        Nuestro enfoque abarca múltiples disciplinas creativas y técnicas, lo que nos permite ofrecer
+                        soluciones integrales y efectivas para nuestros clientes. <br />
+                        En el ámbito del <b>desarrollo de aplicaciones móviles y sitios web</b>, nuestra experiencia se
+                        traduce en la creación de prototipos innovadoras que no solo cumplen con los estándares
+                        tecnológicos más altos,
+                        sino que también están diseñadas para brindar experiencias de usuario excepcionales. Diseñamos
+                        sitios web atractivos y funcionales que no solo
+                        capturan la esencia de tu marca, sino que también ofrecen una navegación intuitiva y una
+                        experiencia cautivadora para los visitantes. <br />
+                        La <b>edición de videos y animación multimedia</b> es otra faceta de nuestra pasión.
+                        Transformamos metraje en bruto en piezas visuales cautivadoras, ya sea para presentaciones
+                        corporativas, contenido
+                        promocional o videos educativos. Nuestro enfoque creativo y atención al detalle garantizan que
+                        cada video cuente una historia memorable. <br />
+                        <br />
+                        <img src="img/video_edit.svg" class="about__icons" alt="">
+                        <img src="img/progressive_app.svg" class="about__icons" alt="">
+                        <img src="img/website_builder.svg" class="about__icons" alt="">
+                        <img src="img/develop_app.svg" class="about__icons" alt=""> <br>
+                        Creamos secuencias dinámicas que comunican información compleja de manera accesible y atractiva.
+                        El diseño <b>UX</b> es el corazón de nuestra filosofía. Nos apasiona diseñar interfaces de
+                        usuario que no solo se ven increíbles, sino que también brindan una experiencia fluida y
+                        agradable.
+                        Cada interacción está cuidadosamente diseñada para maximizar la usabilidad y la satisfacción del
+                        usuario. <br />
+                        En resumen, nos enorgullece fusionar tecnología y creatividad en cada proyecto. Desde el
+                        emocionante mundo del desarrollo de aplicaciones móviles y sitios web hasta la magia de la
+                        edición de videos,
+                        la animación multimedia, los motion graphics y el diseño UX. <br>
+                        <b>Te invitamos a unirte a nosotros en el viaje hacia la excelencia digital y la innovación
+                            constante! </b>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cards">
+            <div class="container">
+                <h2 class="cards__titulo">
+                    Servicios
+                    <img class="cards__img" src="img/dispositivos.png" alt="" />
+
+                </h2>
+                <div class="cards__content">
+                    <div class="cards__card card">
+                        <span class="material-symbols-outlined">
+                            video_settings
+                        </span>
+                        <h4>Edición y Animación</h4>
+                        <p>Transformamos tus ideas en realidades visuales cautivadoras. Nuestros talentosos editores y
+                            animadores trabajan mano a mano contigo para llevar tus contenidos audiovisuales al
+                            siguiente nivel.
+                            Desde cortometrajes hasta videos promocionales, aplicamos técnicas creativas y efectos
+                            visuales impactantes que hacen que tu mensaje destaque y resuene con tu audiencia.</p>
+                    </div>
+                    <div class="cards__card card">
+                        <span class="material-symbols-outlined">
+                            devices_other
+                        </span>
+                        <h4>Desarrollo de Apps & Sitios Web</h4>
+                        <p>Potenciamos tu presencia en línea mediante la creación de aplicaciones y sitios web
+                            innovadores y funcionales. Desde plataformas interactivas hasta soluciones móviles
+                            personalizadas,
+                            nuestro equipo de expertos en desarrollo te ayudará a materializar tu visión digital,
+                            brindando una experiencia única a tus usuarios.</p>
+                    </div>
+                    <div class="cards__card card">
+                        <span class="material-symbols-outlined">
+                            tv_signin
+                        </span>
+                        <h4>Diseño UX (Experiencia de Usuario)</h4>
+                        <p>Creamos experiencias digitales que dejan huella. Nuestro equipo de diseño UX se enfoca en
+                            entender a tus usuarios y sus necesidades para crear interfaces intuitivas y atractivas.
+                            Cada clic,
+                            cada interacción, está cuidadosamente diseñado para guiar a tus visitantes a través de un
+                            viaje fluido y satisfactorio, generando conexiones significativas y fomentando la lealtad a
+                            tu marca.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2 class="contact__titulo">
+                    Contactanos!
+                </h2>
+
+                <div class="contact__content">
+                    <form action="" class="contact__form">
+                        <div class="form__element">
+                            <label for="">Nombre:</label>
+                            <input placeholder="Tu nombre y apellido" type="text">
+                        </div>
+                        <div class="form__element">
+                            <label for="">Email:</label>
+                            <input placeholder="tuemail@email.com" type="email">
+                        </div>
+                        <div class="form__element">
+                            <label for="">Mensaje:</label>
+                            <textarea placeholder="Tu mensaje" name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <button type="submit" class="form__button">ENVIAR</button>
+                    </form>
+                    <div class="contact__redes">
+                        <p>Seguinos en:</p>
+                        <a href="#"> <button><i class="bi bi-instagram"></i></button> Instagram </a> <br>
+                        <a href="#"><button> <i class="bi bi-facebook"></i></button> Facebook </a> <br>
+                        <a href="#"><button> <i class="bi bi-youtube"></i></button> YouTube </a>
+
+                    </div>
+
+                </div>
+            </div>
+            <iframe class="contact__mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52343.03503692947!2d-57.95317029999999!3d-34.9205082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62b1f0085a1%3A0xbcfc44f0547312e3!2sLa%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1691707896567!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <img class="footer__logo" src="img/logo-icon-w.svg" alt="">
+            <img class="footer__logo" src="img/logo-w-text.png" alt="">
+            <span>Todos los derechos reservados.</span>
+        </div>
+    </footer>
 </body>
+
 </html>

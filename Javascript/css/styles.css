@@ -178,19 +178,19 @@ p {
 }
     
 .open-cart {
-    right: -25%;
+    right: 0%;
     display: flex;
-    transform: translate(100%);
+    transform: translate(28vw);
     opacity: 1;
     transition: all 0.5s ;
     -webkit-transition: all 0.5s ;
     -moz-transition: all 0.5s ;
     -ms-transition: all 0.5s ;
     -o-transition: all 0.5s ;
-    -webkit-transform: translate(100%);
-    -moz-transform: translate(100%);
-    -ms-transform: translate(100%);
-    -o-transform: translate(100%);
+    -webkit-transform: translate(28vw);
+    -moz-transform: translate(28vw);
+    -ms-transform: translate(28vw);
+    -o-transform: translate(28vw);
 }
 
   .cart-container {

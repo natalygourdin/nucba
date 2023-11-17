@@ -205,7 +205,7 @@ const addProduct = (e) => {
 
   if (isExistingCartProduct(product)) {
     addUnitToProduct(product);
-    showSuccessModal('Se agrego un juego')
+    showSuccessModal('Se agregó un juego al carrito.')
   } else {
     createCartProduct(product);
     showSuccessModal('Juego añadido')

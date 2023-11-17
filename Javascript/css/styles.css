@@ -255,6 +255,27 @@ p {
     background-color: var(--color-two);
     color: var(--color-three);
   }
+
+  .add-modal {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-threec);
+    background-color: #ff6600;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    transform: translateY(200%);
+    z-index: 9999999999999;
+    font-size: 25px;
+  }
+  
+  .active-modal {
+    transform: translateY(0);
+    transition: all 0.5s ease-in;
+  }
 .active{
     color: var(--color-two);
     background-color: var(--color-three);

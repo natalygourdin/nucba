@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mediaQueries.css" />
     <link rel="stylesheet" href="css/animation.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -31,6 +32,12 @@
         <div class="header__cont" id="">
           <img src="img/logo-w.png" alt="" class="header__logo logo" />
           <nav class="header__nav navbar">
+
+            <div class="menu">
+              <i class="bi bi-list"></i>
+            </div>
+
+            
             <ul class="nav-list">
               <li><a class="nav-link active" href="#hero">HOME</a></li>
               <li><a class="nav-link" href="#catalogo">CATÁLOGO</a></li>
@@ -40,12 +47,12 @@
 
             <div class="cart-btn">
               <i class="cart-icon bi bi-cart2"></i>
-                <div class="cart-bubble">0</div>
+                <div class="cart-number">0</div>
               </i>
             </div>
     
             <div class="cart">
-              <h2>Games</h2>
+              <h4>Games</h4>
     
               <div class="cart-container"></div>
     
@@ -55,11 +62,10 @@
                 <p>Total:</p>
                 <span class="total"></span>
               </div>
-              <button class="btn-buy">Comprar</button>
-              <button class="btn-delete">Vaciar</button>
+              <button class="btn-buy d-inline">Comprar</button>
+              <button class="btn-delete d-inline">Vaciar</button>
             </div>
     
-            <div class="overlay"></div>
           </nav>
         </div>
       </div>
@@ -190,21 +196,28 @@
 
       <section id="catalogo">
         <div class="container">
-          <h4 class="catalogo__title">CATÁLOGO</h4>
-          <div class="catalogo__container-categorias mb-5 pb-5">
-            <button class="catalogo__categorias todas active mx-2">Todas</button>
-            <button data-categoria="deportes" class="catalogo__categorias mx-2">Deportes</button>
-            <button data-categoria="aventura" class="catalogo__categorias mx-2">Aventuras</button>
-            <button data-categoria="infantil" class="catalogo__categorias mx-2">Infantiles</button>
-            <button data-categoria="terror" class="catalogo__categorias mx-2">Terror</button>
+          <h4 class="catalogo__title">CATÁLOGO</h4>  </div> 
+
+          <div class="catalogo__container-categorias">
+            <div class="container">
+              <button class="catalogo__categorias todas active mx-2">Todas</button>
+              <button data-categoria="deportes" class="catalogo__categorias mx-2">Deportes</button>
+              <button data-categoria="aventura" class="catalogo__categorias mx-2">Aventuras</button>
+              <button data-categoria="infantil" class="catalogo__categorias mx-2">Infantiles</button>
+              <button data-categoria="terror" class="catalogo__categorias mx-2">Terror</button>
           </div>
+        </div>
+<div class="container">
           <div class="catalogo__content mb-5 mt-5" id="catalogo__content">
           </div>     
-                 
+          
+          
+          
+
           <button class="catalogo-btn">Ver mas</button>
 
         </div>
-   
+
       </section>
       <section id="nosotros">
         <div class="container">
@@ -267,6 +280,8 @@
         ></span
       >
     </footer>
+    <div class="add-modal"></div>
+
     <script src="js/data.js"></script>
     <script src="js/hero-animation.js"></script>
     <script src="js/index.js"></script>

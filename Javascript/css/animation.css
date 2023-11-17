@@ -1,0 +1,226 @@
+@keyframes scale {
+ 
+    0%{
+        transform: scale(0.5)    ;
+        -webkit-transform: scale(0.5)    ;
+        -moz-transform: scale(0.5)    ;
+        -ms-transform: scale(0.5)    ;
+        -o-transform: scale(0.5)    ;
+        opacity: 0;
+}
+50%{
+    transform: scale(1)    ;
+    -webkit-transform: scale(1)    ;
+    -moz-transform: scale(1)    ;
+    -ms-transform: scale(1)    ;
+    -o-transform: scale(1)    ;
+    opacity: 1;
+}
+    100%{
+        transform: scale(1)    ;
+        -webkit-transform: scale(1)    ;
+        -moz-transform: scale(1)    ;
+        -ms-transform: scale(1)    ;
+        -o-transform: scale(1)    ;
+        background-image: url(../img/game02.png);
+        opacity: 1;
+}
+}
+
+@keyframes move {
+ 
+    0%{
+        transform: translateX(0)    ;
+        -webkit-transform: translateX(0)    ;
+        -moz-transform: translateX(0)    ;
+        -ms-transform: translateX(0)    ;
+        -o-transform: translateX(0)    ;
+}
+    50%{
+        transform: translateX(2vw)    ;
+        -webkit-transform: translateX(2vw)    ;
+        -moz-transform: translateX(2vw)    ;
+        -ms-transform: translateX(2vw)    ;
+        -o-transform: translateX(2vw)    ;
+}
+    100%{
+        transform: translateX(0vw)    ;
+        -webkit-transform: translateX(0vw)    ;
+        -moz-transform: translateX(0vw)    ;
+        -ms-transform: translateX(0vw)    ;
+        -o-transform: translateX(0vw)    ;
+}
+}
+@keyframes move-up {
+ 
+    0%{
+        transform: translateY(0) scale(4)    ;
+        -webkit-transform: translateY(0) scale(4)    ;
+        -moz-transform: translateY(0) scale(4)    ;
+        -ms-transform: translateY(0) scale(4)    ;
+        -o-transform: translateY(0) scale(4)    ;
+}
+    50%{
+        transform: translateY(0.5vw) scale(4)    ;
+        -webkit-transform: translateY(0.5vw) scale(4)    ;
+        -moz-transform: translateY(0.5vw) scale(4)    ;
+        -ms-transform: translateY(0.5vw) scale(4)    ;
+        -o-transform: translateY(0.5vw) scale(4)    ;
+}
+    100%{
+        transform: translateY(0vw) scale(4)    ;
+        -webkit-transform: translateY(0vw) scale(4)    ;
+        -moz-transform: translateY(0vw) scale(4)    ;
+        -ms-transform: translateY(0vw) scale(4)    ;
+        -o-transform: translateY(0vw) scale(4)    ;
+}
+}
+@keyframes move2 {
+ 
+    0%{
+        transform: translateY(0)    ;
+        -webkit-transform: translateY(0)    ;
+        -moz-transform: translateY(0)    ;
+        -ms-transform: translateY(0)    ;
+        -o-transform: translateY(0)    ;
+}
+    50%{
+        transform: translateY(2vw)    ;
+        -webkit-transform: translateY(2vw)    ;
+        -moz-transform: translateY(2vw)    ;
+        -ms-transform: translateY(2vw)    ;
+        -o-transform: translateY(2vw)    ;
+}
+    100%{
+        transform: translateY(0vw)    ;
+        -webkit-transform: translateY(0vw)    ;
+        -moz-transform: translateY(0vw)    ;
+        -ms-transform: translateY(0vw)    ;
+        -o-transform: translateY(0vw)    ;
+}
+}
+
+.cls-1 {
+    stroke-width: 2;
+    animation: letter-animation 2s linear forwards;
+    -webkit-animation: letter-animation 2s linear forwards;
+}
+
+.cls-2 {
+    stroke-width: 2;
+    animation: letter-animation 2s 0.2s linear forwards;
+    -webkit-animation: letter-animation 2s 0.2s linear forwards;
+}
+
+.cls-3 {
+    stroke-width: 2;
+    animation: letter-animation 4s 0.4s linear forwards;
+    -webkit-animation: letter-animation 4s 0.4s linear forwards;
+}
+
+.cls-4 {
+    stroke-width: 2;
+    animation: letter-animation 2s  0.6s linear forwards;
+    -webkit-animation: letter-animation 2s  0.6s linear forwards;
+}
+
+.cls-5{
+    stroke-width: 2;
+    animation: letter-animation 2s 0.8s linear forwards;
+    -webkit-animation: letter-animation 2s 0.8s linear forwards;
+}
+
+.cls-6 {
+    stroke-width: 2;
+    animation: letter-animation 5s 1s linear forwards;
+    -webkit-animation: letter-animation 5s 1s linear forwards;
+}
+
+.cls-7{
+    stroke-width: 2;
+    animation: letter-animation 4s 1.2s linear forwards;
+    -webkit-animation: letter-animation 4s 1.2s linear forwards;
+}
+
+.cls-8 {
+    stroke-width: 2;
+    animation: letter-animation 2s 1.4s linear forwards;
+    -webkit-animation: letter-animation 2s 1.4s linear forwards;
+}
+
+.cls-9 {
+    stroke-width: 2;
+    animation: letter-animation 5s 1.6s linear forwards;
+    -webkit-animation: letter-animation 5s 1.6s linear forwards;
+}
+
+.cls-10 {
+    stroke-width: 2;
+    animation: letter-animation 4s 1.8s linear forwards;
+    -webkit-animation: letter-animation 4s 1.8s linear forwards;
+}
+
+.cls-11 {
+    stroke-width: 2;
+    animation: letter-animation 3s 2s linear forwards;
+    -webkit-animation: letter-animation 3s 2s linear forwards;
+}
+
+.cls-12 {
+    stroke-width: 2;
+    animation: letter-animation 5s 2.2s linear forwards;
+    -webkit-animation: letter-animation 5s 2.2s linear forwards;
+}
+
+.cls-13 {
+    stroke-width: 2;
+    animation: letter-animation 2s 2.4s linear forwards;
+    -webkit-animation: letter-animation 2s 2.4s linear forwards;
+}
+
+.cls-14{
+    stroke-width: 2;
+    animation: letter-animation 3s 2.6s linear forwards;
+    -webkit-animation: letter-animation 3s 2.6s linear forwards;
+}
+.cls-15{
+    stroke-width: 2;
+    animation: letter-animation 2s 2.8s linear forwards;
+    -webkit-animation: letter-animation 2s 2.8s linear forwards;
+}
+.cls-16{
+    stroke-width: 2;
+    animation: letter-animation 4s 3s linear forwards;
+    -webkit-animation: letter-animation 4s 3s linear forwards;
+}
+.cls-17{
+    stroke-width: 2;
+    animation: letter-animation 2s 3.2s linear forwards;
+    -webkit-animation: letter-animation 2s 3.2s linear forwards;
+}
+.cls-18{
+    stroke-width: 2;
+    animation: letter-animation 2s 3.4s linear forwards;
+    -webkit-animation: letter-animation 2s 3.4s linear forwards;
+}
+.cls-19{
+    stroke-width: 2;
+    animation: letter-animation 2s 3.8s linear forwards;
+    -webkit-animation: letter-animation 2s 3.8s linear forwards;
+}
+.cls-20{
+    stroke-width: 2;
+    animation: letter-animation 2s 3s linear forwards;
+    -webkit-animation: letter-animation 2s 3s linear forwards;
+}
+
+@keyframes letter-animation {
+    0% {
+        stroke-dashoffset: 2600;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #f4bf2d
+  
+    }
+}

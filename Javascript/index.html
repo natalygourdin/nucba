@@ -1,24 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>EJ3</title>
-</head>
-<body>
-    <main>
-        <h4>
-        Elegir Pizza:
-        </h4>
-        <input type="text" id="number">
-        <button id="buscar">Buscar</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <div class="container">
-            
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <title>PIXELPLAY</title>
+  </head>
+
+  <body id="body">
+    <header id="header">
+      <div class="container">
+        <div class="header__cont" id="">
+          <img src="img/logo-w.png" alt="" class="header__logo logo" />
+          <nav class="header__nav navbar">
+            <ul class="nav-list">
+              <li><a class="nav-link active" href="#hero">HOME</a></li>
+              <li><a class="nav-link" href="#catalogo">CATÁLOGO</a></li>
+              <li><a class="nav-link" href="#nosotros">NOSOTROS</a></li>
+              <li><a class="nav-link" href="#contacto">CONTACTO</a></li>
+            </ul>
+
+            <div class="cart-btn">
+              <i class="cart-icon bi bi-cart2"></i>
+                <div class="cart-bubble">0</div>
+              </i>
+            </div>
+    
+            <div class="cart">
+              <h2>Games</h2>
+    
+              <div class="cart-container"></div>
+    
+              <span class="divider"></span>
+    
+              <div class="cart-total">
+                <p>Total:</p>
+                <span class="total"></span>
+              </div>
+              <button class="btn-buy">Comprar</button>
+              <button class="btn-delete">Vaciar</button>
+            </div>
+    
+            <div class="overlay"></div>
+          </nav>
         </div>
-    </main>
-    <script src="index.js"></script>
+      </div>
+    </header>
 
-</body>
+    <main>
+      <section id="hero" class="box" data-scroll-speed="1">
+        <div id="game1"></div>
+
+        <img src="img/moon-01.png" alt="" id="moon" />
+        <img src="img/birds-01.png" alt="" id="birds" />
+        <img src="img/hill3-01-01.png" alt="" id="hill3" />
+        <img src="img/castle-01.png" alt="" id="castle" />
+        <img src="img/nube-01-01.png" alt="" id="nube1" />
+        <img src="img/nube-01-01.png" alt="" id="nube2" />
+        <!-- <h4 id="hero__title" class="hero__title">Creá tu propia Mágia</h4> -->
+        <svg
+          id="hero__title"
+          data-name="Capa 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 574.22 85.57"
+        >
+          <path
+            class="title-animado cls-1"
+            d="M45.2,69.54,34.07,67.13v8.81q-1.4,2.59-8.35,4.83a17,17,0,0,1-4-2.88,10.44,10.44,0,0,1-3.07-3.8V35.76A7.55,7.55,0,0,1,22,31.49c3-1.48,5.39-2.6,7.14-3.34q3.3,8.63,3.3,10.12a3,3,0,0,1-.1.83,4.5,4.5,0,0,1,.19,1.3q0,2.41-2.41,5.66L43,36.13a10.75,10.75,0,0,0-2.42-4.36L32.3,21.47H30A88.15,88.15,0,0,0,7.43,34.09Q6.7,47.55,6.69,59.42q0,3.26.28,9.65.84,3.63,7.89,9.84,3.9,3.44,8.07,6.87l2.79.46q6.86-1,14.19-7,6-4.92,5.48-7.33Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-2"
+            d="M62.19,45l8.53-5a1.17,1.17,0,0,0,.93-1.21,2.55,2.55,0,0,0-.74-1.67l-4.36-7.61a.72.72,0,0,0-.65-.28c-1,0-3.1,1.39-6.31,4.18V25q-6,4.82-10.77,8.07l4.64-.19v31a2.88,2.88,0,0,1-.37,1.85,7.76,7.76,0,0,1-2.88,1.67h13a3.55,3.55,0,0,1-2.88-3.62q-.84-13.44-.46-27.28c.55-.74,1-1.14,1.39-1.2s1.05.68,1.85,2.41a22.93,22.93,0,0,1,1.3,3.43,6.77,6.77,0,0,1-2.22,3.44Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-3"
+            d="M84.64,37.52a2.11,2.11,0,0,0-1.86-.09L72.39,45.6a76.85,76.85,0,0,0-1.3,13.64,39.77,39.77,0,0,0,.74,8.07l9.38,8.17,4.73-.1,5.66-8.07-4.08-5.2c-.25,2.91-.4,4.49-.47,4.74a13.75,13.75,0,0,1-2.5,6A7,7,0,0,1,81.39,70l-.65-15.22c.44-.49,1.58-.74,3.44-.74a15.92,15.92,0,0,1,8.26,2.14l2.32-4.83-2.6-8.91Zm-4,14.11,1.11-10.58c.25-.43.5-.65.75-.65s.4.28.83.84l4.73,10.67A27.94,27.94,0,0,0,80.65,51.63Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-4"
+            d="M118.14,42.07c.31-1.61-1.18-3.71-4.45-6.31q-3.43-2.68-6.5-4.92-8.18,4.83-9.09,6a2.06,2.06,0,0,0-.47,1.4,6.76,6.76,0,0,0,1.49,4.17l2.78,3.71,1.95-.09L103,43c0-1.12,1.15-2.38,3.44-3.81,1.36-.86,2.19-1.39,2.5-1.57l1.39-.75V64.06c-.37,1.24-1,1.8-2,1.67q-2.68-3.62-2.69-9.83a17.5,17.5,0,0,1,.19-2.6q-.09-1.95,3.06-5.38l-6.12,2.78a11.13,11.13,0,0,0-5.76,5q3.48,16.89,7.51,16.15l5.85-3.71v3.34c-.18.74,0,1.11.67,1.11s1.82-.56,3.39-1.67l6.8-7.52-3.43-.18Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-5"
+            d="M166.39,38.64h5.2l-.84-4h-4.82l.18-11.79q-8,11-16,15.41H158l-.47,39.25q.28,2.33,4.74,4l7.61,2.78c-3-2.53-4.46-4.36-4.46-5.47a1.54,1.54,0,0,1,.19-.74Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-6"
+            d="M195,73.34a6,6,0,0,1,.1-1.11V45.87a2.68,2.68,0,0,1,.88-2.31,13.36,13.36,0,0,1,2.55-1.21h-13A3.56,3.56,0,0,1,188.38,46q.75,12.06.47,22.64a32.55,32.55,0,0,1-3.25,4c-1.73.5-2.91.12-3.53-1.11q-.73-15.87-.74-23.2.19-.09-3.8-3.44C176,43.62,175,43,174.37,43c-.31,0-.46.22-.46.65q0,27.93.18,28.12l5.29,7.6a.72.72,0,0,0,.65.28c.5,0,2-1,4.64-3,1.8-1.85,3.28-3.49,4.46-4.91v8.35q7.14-.56,10.76-.65Q195,77.7,195,73.34Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-7"
+            d="M244.43,40.21v-5h-11.5l3.89,32.57-4.64-2,7,37.22.93-11,.65-11.78.37.74,3.53,5.38-.09-17.07,5.29,7.42,9.09-5.38,2-21L251.49,36.5Zm4.64,30.72-4.54-3.34-.1-23.29,6.31-3,1.12,27.19Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-8"
+            d="M284.34,37.06,280,29.45a.74.74,0,0,0-.66-.28q-1.49,0-6.3,4.18V25q-6,4.82-10.77,8.07l4.64-.19v31a2.88,2.88,0,0,1-.37,1.85,7.76,7.76,0,0,1-2.88,1.67h13a3.55,3.55,0,0,1-2.87-3.62q-.84-13.44-.47-27.28c.56-.74,1-1.14,1.4-1.2s1.05.68,1.85,2.41a22.93,22.93,0,0,1,1.3,3.43,6.73,6.73,0,0,1-2.23,3.44V45l8.54-5a1.17,1.17,0,0,0,.93-1.21A2.55,2.55,0,0,0,284.34,37.06Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-9"
+            d="M308.83,54c-.24-4.27-1.05-7.05-2.41-8.35l-.74-1.21-6.59-4.55a51.8,51.8,0,0,0-13.27,7.06q-1,17.16-.83,21.52.56,2.06,9.92,9.28l1.67.28a23.85,23.85,0,0,0,7.61-2.78q5.58-2.88,5.11-5.2Q309,57.19,308.83,54Zm-12.25,21a4.48,4.48,0,0,1-2.5-2.69l-.46-24.41a5.6,5.6,0,0,1,2-2.5l3-1.76q1.75,4.44,1.76,28.67A6.05,6.05,0,0,1,296.58,74.92Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-10"
+            d="M323.87,40.21v-5H312.36l3.9,32.57-4.64-2,7,37.22.93-11,.65-11.78.37.74,3.52,5.38L324,69.26l5.29,7.42,9.09-5.38,2.05-21L330.92,36.5Zm4.64,30.72L324,67.59l-.09-23.29,6.31-3,1.11,27.19Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-11"
+            d="M353.1,74.46q.73-5.58,1-15.13c.18-6.5.15-12.09-.09-16.8h-8.36q.66,9,.65,16.43a110.05,110.05,0,0,1-1,16.42,5.36,5.36,0,0,1-2.6,4.09h12.81A4.52,4.52,0,0,1,353.1,74.46Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-12"
+            d="M355.05,35.2q0-8.45-1-8.44a6.57,6.57,0,0,0-1.21.18,6,6,0,0,1-1.21.19,4.88,4.88,0,0,1-2.87-.84c-1.8.13-2.91.9-3.34,2.32-.07.93-.16,1.89-.28,2.88a17.85,17.85,0,0,0,3.62,6.68A10.33,10.33,0,0,0,355.05,35.2Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-13"
+            d="M380.38,42.07c.31-1.61-1.18-3.71-4.45-6.31q-3.44-2.68-6.5-4.92c-5.44,3.22-8.48,5.23-9.09,6a2.11,2.11,0,0,0-.47,1.4,6.76,6.76,0,0,0,1.49,4.17l2.78,3.71,1.95-.09L365.25,43c0-1.12,1.15-2.38,3.44-3.81,1.36-.86,2.19-1.39,2.5-1.57l1.4-.75V64.06c-.38,1.24-1.06,1.8-2,1.67q-2.69-3.62-2.69-9.83a17.5,17.5,0,0,1,.19-2.6q-.09-1.95,3.06-5.38L365,50.7a11.13,11.13,0,0,0-5.76,5q3.48,16.89,7.51,16.15l5.86-3.71v3.34q-.29,1.11.66,1.11c.69,0,1.82-.56,3.4-1.67l6.79-7.52L380,63.23Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-14"
+            d="M462.41,22.77a12.59,12.59,0,0,1,.09,2.13A12.59,12.59,0,0,1,461.39,28L448,58.5,435.78,27.41a8.92,8.92,0,0,1-.65-2c0-2.29.46-3.56,1.39-3.81l-2-.18-14.76,1.11h-1.85a3.31,3.31,0,0,1,1.67,1.3l1.11,1.85,2.6,22.09-4.64-2,3.53,23-3.34-2.22,6.68,38.32,2-22.27,3,4.64L429.93,63l.37.74,3.53,5.38-.09-22.55,14.1,26.64,15.31-31.65L463,68.15l3.52-5.39.38-.74-.56,24.22,3-4.64,2,22.27L478,65.55l-3.34,2.22,3.53-23-4.64,2,2.69-21.9c1.23-2.22,2-3.4,2.41-3.52H460.18C461.42,21.5,462.16,22,462.41,22.77Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-15"
+            d="M503.33,42.07q.46-2.41-4.45-6.31c-2.29-1.79-4.45-3.43-6.5-4.92q-8.16,4.83-9.09,6a2.11,2.11,0,0,0-.46,1.4,6.75,6.75,0,0,0,1.48,4.17l2.79,3.71,1.94-.09L488.21,43c0-1.12,1.14-2.38,3.43-3.81,1.36-.86,2.2-1.39,2.51-1.57l1.39-.75V64.06c-.37,1.24-1.05,1.8-2,1.67q-2.7-3.62-2.69-9.83a18.94,18.94,0,0,1,.18-2.6q-.09-1.95,3.06-5.38l-6.12,2.78a11.14,11.14,0,0,0-5.75,5q3.46,16.89,7.5,16.15l5.86-3.71v3.34q-.29,1.11.66,1.11c.69,0,1.83-.56,3.4-1.67l6.8-7.52L503,63.23Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-16"
+            d="M531,34.74a30.54,30.54,0,0,1-5.69-3.16c.06,1.12.12,2.57.18,4.37l-7.89-4.37-9.46,13.89,2,21.07,9,5.41,7-8.44q.18,18.27.19,18V84.2a7.26,7.26,0,0,1-2.56,4q-4.83,4.28-5.47,4.36c-.24.06-.51-.62-.82-2-.67-2.91-1.18-5.13-1.55-6.68a6.74,6.74,0,0,1,2.23-3.43V80l-8.54,5A2.35,2.35,0,0,0,508.25,87a11.51,11.51,0,0,0,1.2,3.72l4.33,7.61a.89.89,0,0,0,.64.27q1.11,0,3.69-2,6.9-5.48,15.38-13l.75-22.18V37C534.24,36.47,533.16,35.73,531,34.74ZM520,66.2l-2.79-2.43,1.12-27.32,7.31,4.26q.48,9.91.67,19.56Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-17"
+            d="M552.52,35.2c0-5.63-.35-8.44-1-8.44a6.5,6.5,0,0,0-1.2.18,6,6,0,0,1-1.21.19,4.94,4.94,0,0,1-2.88-.84c-1.79.13-2.9.9-3.34,2.32q-.09,1.39-.27,2.88a17.85,17.85,0,0,0,3.61,6.68A10.33,10.33,0,0,0,552.52,35.2Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-18"
+            d="M550.57,74.46q.73-5.58,1-15.13c.18-6.5.15-12.09-.1-16.8h-8.35q.65,9,.65,16.43a110.05,110.05,0,0,1-1,16.42,5.36,5.36,0,0,1-2.6,4.09H553A4.52,4.52,0,0,1,550.57,74.46Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-19"
+            d="M577.48,63.23l.37-21.16q.46-2.41-4.46-6.31-3.43-2.68-6.49-4.92-8.17,4.83-9.1,6a2.11,2.11,0,0,0-.46,1.4,6.75,6.75,0,0,0,1.48,4.17l2.79,3.71,1.95-.09L562.72,43c0-1.12,1.15-2.38,3.44-3.81,1.36-.86,2.19-1.39,2.5-1.57l1.39-.75V64.06c-.37,1.24-1,1.8-2,1.67q-2.68-3.62-2.69-9.83a17.5,17.5,0,0,1,.19-2.6q-.1-1.95,3.06-5.38l-6.13,2.78a11.14,11.14,0,0,0-5.75,5q3.48,16.89,7.51,16.15l5.85-3.71v3.34q-.27,1.11.66,1.11c.7,0,1.83-.56,3.4-1.67l6.8-7.52Z"
+            transform="translate(-6.69 -19.23)"
+          />
+          <path
+            class="title-animado cls-20"
+            d="M498.38,29.9c2.76,4.86,8.73-10.67,8.73-10.67l-8.54,5S495.62,25.05,498.38,29.9Z"
+            transform="translate(-6.69 -19.23)"
+          />
+        </svg>
+        <img src="img/hill1-01-01.png" alt="" id="hill1" />
+        <img src="img/hill2-01-01.png" alt="" id="hill2" />
+        <div class="container"></div>
+      </section>
+
+      <section id="catalogo">
+        <div class="container">
+          <h4 class="catalogo__title">CATÁLOGO</h4>
+          <div class="catalogo__container-categorias mb-5 pb-5">
+            <button class="catalogo__categorias todas active mx-2">Todas</button>
+            <button data-categoria="deportes" class="catalogo__categorias mx-2">Deportes</button>
+            <button data-categoria="aventura" class="catalogo__categorias mx-2">Aventuras</button>
+            <button data-categoria="infantil" class="catalogo__categorias mx-2">Infantiles</button>
+            <button data-categoria="terror" class="catalogo__categorias mx-2">Terror</button>
+          </div>
+          <div class="catalogo__content mb-5 mt-5" id="catalogo__content">
+          </div>     
+                 
+          <button class="catalogo-btn">Ver mas</button>
+
+        </div>
+   
+      </section>
+      <section id="nosotros">
+        <div class="container">
+          <div class="nosotros__content">
+            <h4 class="nosotros__title">PIXELPLAY</h4>
+
+            <img src="img/about-01.png" alt="" class="nosotros__ph" />
+
+            <p class="nosotros__text">
+              <span>
+                ¡Bienvenido al paraíso de los jugadores de PlayStation!
+              </span>
+              <br />
+              En PixelPlay, nos apasiona llevar la emoción del mundo virtual a
+              tus manos con una amplia selección de juegos de PlayStation.
+              Sumérgete en una experiencia de juego inigualable mientras
+              exploras nuestra colección que abarca desde los clásicos
+              atemporales hasta los títulos más recientes y emocionantes. <br />
+
+              Nuestro equipo de expertos comparte tu entusiasmo por los
+              videojuegos y se esfuerza por brindarte las últimas novedades en
+              el mundo del entretenimiento digital. Desde épicas aventuras de
+              rol hasta trepidantes juegos de acción, nuestra variedad de
+              géneros satisface todos los gustos y edades.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <div class="container">
+          <h5 class="contacto__title">Seguinos en:</h5>
+          <div class="contacto__redes">
+            <a class="redes__link" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="redes__link" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="redes__link" href="#"><i class="bi bi-twitch"></i></a>
+            <a class="redes__link" href="#"><i class="bi bi-twitter"></i></a>
+            <a class="redes__link" href="#"><i class="bi bi-tiktok"></i></a>
+          </div>
+          <div class="contacto__content">
+            <p class="contacto__text">
+              Suscribete y enterate primero de las novedades!
+            </p>
+            <form class="contacto__form" action="">
+              <input type="email" class="form__input" />
+              <button class="form__button" type="submit">Suscribirme</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="img/logo.png" alt="" class="footer__logo" />
+      <p>Todos los derechos reservados.</p>
+      <span
+        >web developer:
+        <a target="_blank" href="http://www.natalygourdin.com.ar"
+          >www.natalygourdin.com.ar</a
+        ></span
+      >
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/hero-animation.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>

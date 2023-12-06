@@ -656,8 +656,8 @@ padding: 4px 25px;
     text-align: center;
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
+    align-items: top;
+    justify-content: center;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -668,14 +668,14 @@ padding: 4px 25px;
 .contacto__text {
     font-size: 1.9rem;
     text-align: left;
-    width: 30%;
+    width: 35%;
     position: relative;
-    top: 10px;
     font-weight: 500;
+    padding-top: 0px;
 }
 
 .contacto__form {
-    width: 90%;
+    width: 40%;
 }
 
 #contacto .form__input {
@@ -686,14 +686,13 @@ padding: 4px 25px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    width: 60%;
+    width: 100%;
 }
 
 #contacto .form__button {
     position: relative;
     color: var(--color-three);
     background-color: var(--color-one);
-    margin-left: 20px;
 }
 
 #contacto .form__button:hover {
@@ -726,3 +725,14 @@ footer a {
     width: 12vw;
     margin-bottom: 10px;
 }
+
+.error {
+    border: 1px solid red;
+  }
+
+  .error-message {
+    padding: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 5px;
+  }

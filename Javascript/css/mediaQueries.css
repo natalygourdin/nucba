@@ -87,3 +87,50 @@
     line-height: 26px;
 }
 }
+
+@media (max-width: 592px) {
+    #hero {
+        min-height: 50vh;
+        z-index: 999999;
+        background: var(--gradient-bg);
+        background: var(--gradient-f);
+        overflow-x: hidden;
+        width: 100%;
+    }
+    #hero__title{
+        width: 80%;
+        top: 50vw;
+        position: fixed;
+        z-index: 9999999999;
+    }
+    #hero #hill1, #hero #hill2, #hero #hill3 ,#nube1, #nube2, #hero #castle, #hero #moon, #hero #birds{
+display: none;
+    }
+    .contacto__content{
+        flex-direction: column;
+        padding: 50px 20px;
+        width: 100%;
+        text-align: center;
+        }
+    .contacto__content, .contacto__text, .contacto__form{
+        width: 100%;
+        text-align: center;
+
+    }
+    #hero{
+        background-image: url(../img/bg-movil.jpg);
+        background-size: 100%;
+        background-repeat: none;
+        background-position: 0px 0px;
+    }
+    header, body{
+        background-color: #b1b1a0
+    }
+    .catalogo__content .card:nth-child(3) {
+        width: 100%;
+        opacity: 1;
+    }
+    #catalogo, #nosotros, #contacto, footer{
+        z-index: 99999999999;
+    }
+}

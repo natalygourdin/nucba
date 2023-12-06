@@ -14,7 +14,7 @@ let card = document.getElementsByClassName("card");
 let nosotrosPH = document.getElementsByClassName("nosotros__ph");
 
 $(document).ready(function () {
- 
+  if ($(window).width() > 900 ) {
   window.addEventListener("scroll", () => {
     let value = window.scrollY;
 
@@ -43,7 +43,7 @@ $(document).ready(function () {
     // body.style.background = "linear-gradient(163deg,rgba(0,"+ value * 3 + ", 255,1) -50%, rgba(255,255,255,1) 27%, rgba(255,255,255,1) 72%, rgba(255,255,0,1) 180%)";
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > 10) {
+      if ($(window).width() > 900 && $(this).scrollTop() > 10) {
         $(game1).addClass("scale");
         game1.style.position = "fixed";
         hill3.style.top = -8 + "vw";
@@ -56,7 +56,7 @@ $(document).ready(function () {
         hill3.style.top = -1 + "vw";
       }
 
-      if ($(this).scrollTop() > 410) {
+      if ($(window).width() > 900 && $(this).scrollTop() > 410) {
         game1.style.position = "absolute";
         game1.style.top = 50.5 + "vw";
         game1.style.left = 53 + "vw";
@@ -78,7 +78,7 @@ $(document).ready(function () {
         game1.style.top = 10 + "vw";
         game1.style.left = 42 + "vw";
       }
-      if ($(this).scrollTop() > 410) {
+      if ($(window).width() > 900 && $(this).scrollTop() > 410) {
         game1.style.display = "none";
         $(".card:nth-child(3)").css("opacity", "1");
       } else {
@@ -86,7 +86,7 @@ $(document).ready(function () {
         $(".card:nth-child(3)").css("opacity", "0");
       }
 
-      if ($(this).scrollTop() > 2110) {
+      if ($(window).width() > 900 && $(this).scrollTop() > 2110) {
         $(".nosotros__ph").css("left", "-4vw");
       } else {
         $(".nosotros__ph").css("left", "-54vw");
@@ -112,6 +112,7 @@ $(document).ready(function () {
       });
     }
   });
+}
 });
 
 // Obtener todos los enlaces de navegación

@@ -258,12 +258,15 @@
             <a class="redes__link" href="#"><i class="bi bi-tiktok"></i></a>
           </div>
           <div class="contacto__content">
-            <p class="contacto__text">
-              Suscribete y enterate primero de las novedades!
+            <p class="contacto__text ">
+              Suscribite y enterate primero de las novedades!
             </p>
-            <form class="contacto__form" action="">
-              <input type="email" class="form__input" />
-              <button class="form__button" type="submit">Suscribirme</button>
+            <form id="contactForm" class="contacto__form d-flex flex-column  justify-content-start align-items-start " action="">
+              <input type="nombre" name="nombre" placeholder="Nombre y Apellido" class="form__nombre form__input" />
+              <input type="email" name="email" placeholder="Email" class="form__email form__input mt-2" />
+              <div class="error-message" id="error"></div>
+
+              <button class="form__button mt-2" type="submit" onclick="validarCampo()">Suscribirme</button>
             </form>
           </div>
         </div>
@@ -285,5 +288,6 @@
     <script src="js/data.js"></script>
     <script src="js/hero-animation.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/validaciones.js"></script>
   </body>
 </html>

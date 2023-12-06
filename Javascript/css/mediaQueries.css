@@ -48,6 +48,7 @@
         -moz-transform: translate(0%);
         -ms-transform: translate(0%);
         -o-transform: translate(0%);
+        z-index: 99999999999999;
 }
 .catalogo__content {
     width: 100%;
@@ -99,9 +100,9 @@
     }
     #hero__title{
         width: 80%;
-        top: 50vw;
-        position: fixed;
-        z-index: 9999999999;
+        top: 20vw;
+        position: relative;
+        z-index: 999999999;
     }
     #hero #hill1, #hero #hill2, #hero #hill3 ,#nube1, #nube2, #hero #castle, #hero #moon, #hero #birds{
 display: none;
@@ -130,7 +131,17 @@ display: none;
         width: 100%;
         opacity: 1;
     }
-    #catalogo, #nosotros, #contacto, footer{
-        z-index: 99999999999;
-    }
+
+    .open-cart{
+        position: relative;
+        display: flex;
+        transform: translate(0%);
+        right: 0%;
+        width: 100vw;
+        -webkit-transform: translate(0%);
+        -moz-transform: translate(0%);
+        -ms-transform: translate(0%);
+        -o-transform: translate(0%);
+        z-index: 99999999999999!important;
+}
 }
